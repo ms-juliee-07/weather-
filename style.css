@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#bgContainer {
+  min-height: 100vh;
+  background: url('https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.container h1 {
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px #000;
+  font-size: 2.5rem;
+}
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search input {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+  outline: none;
+}
+
+.search button {
+  padding: 12px 20px;
+  background: #f12711;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search button:hover:not(:disabled) {
+  background: #f37335;
+}
+
+.search button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.weather {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  color: white;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease;
+}
+
+.weather img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.weather h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.weather p {
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+  .search input {
+    width: 100%;
+    max-width: 250px;
+  }
+  .search button {
+    width: 100%;
+    max-width: 250px;
+  }
+  .weather {
+    padding: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
